@@ -83,7 +83,7 @@ for (let i = 0; i < hexCodes.length; i++) {
     navigator.clipboard.writeText(code)
     copyNotification.textContent = `Copied ${code} to clipboard!`
     setTimeout(()=>{
-        copyNotification.textContent = ''
+        copyNotification.textContent = 'Copy hex codes with a click.'
     }, 1500)
   })
 }
