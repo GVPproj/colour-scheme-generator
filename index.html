@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Color Scheme Generator</title>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <input id="colour-picker" value="#1111dd" type="color" />
+        <p id="user-hex-display"></p>
+
+        <div class="custom-select">
+          <select name="scheme-select" id="scheme-select">
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-dark">Monochrome-dark</option>
+            <option value="monochrome-light">Monochrome-light</option>
+            <option value="analogic">Analogic</option>
+            <option value="complement">Complement</option>
+            <option value="analogic-complement">Analogic-complement</option>
+            <option value="triad">Triad</option>
+          </select>
+        </div>
+        <!--custom select-->
+        <button id="btn-submit" type="submit">Get Colour Scheme</button>
+      </header>
+      <main>
+        <div class="colour-div">
+          <div class="colour-bar" id="colour-bar-1"></div>
+          <div class="colour-hex"><p id="hex-1"></p></div>
+        </div>
+        <div class="colour-div">
+          <div class="colour-bar" id="colour-bar-2"></div>
+          <div class="colour-hex"><p id="hex-2"></p></div>
+        </div>
+        <div class="colour-div">
+          <div class="colour-bar" id="colour-bar-3"></div>
+          <div class="colour-hex"><p id="hex-3"></p></div>
+        </div>
+        <div class="colour-div">
+          <div class="colour-bar" id="colour-bar-4"></div>
+          <div class="colour-hex"><p id="hex-4"></p></div>
+        </div>
+        <div class="colour-div">
+          <div class="colour-bar" id="colour-bar-5"></div>
+          <div class="colour-hex"><p id="hex-5"></p></div>
+        </div>
+      </main>
+    </div>
+    <!--  container -->
+  </body>
+</html>

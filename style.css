@@ -1,0 +1,154 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+}
+
+body {
+  margin: 0;
+  background: #1c1c1c;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+/* typography */
+
+p{
+  font-size: .75em;
+  color: #D5D4D8;
+  text-transform: uppercase;
+}
+
+/* layout */
+
+.container {
+  margin: 20px auto 20px;
+  background: #1f2937;
+  width: 90%;
+  max-width: 550px;
+  /* border-radius: 5px; */
+}
+
+header {
+  min-height: 90px;
+  padding: 24px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 4px; */
+  justify-content: space-between;
+}
+main {
+  height: 460px;
+  display: flex;
+}
+
+/* UI elements */
+
+
+#colour-picker {
+  height: 43px;
+  width: 61px;
+}
+
+select{
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='36' viewBox='0 0 24 24' width='36' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 50%;
+}
+
+#scheme-select {
+  height: 43px;
+  width: 205px;
+  color: white;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 9px 13px;
+  border: 2px solid #d1d5db;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+#btn-submit {
+  height: 43px;
+  background: #3d4b60;
+  color: white;
+  font-size: 0.75em;
+  font-weight: 500;
+  padding: 0 15px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border: 2px solid #3d4b60;
+  border-radius: 4px;
+  transition: ease-in 100ms;
+}
+
+#btn-submit:hover,
+#btn-submit:active {
+  background: #1f293a;
+  border: 2px solid #d1d5db;
+}
+
+/* colour bars  */
+
+.colour-div {
+  width: 20%;
+}
+
+.colour-bar {
+  height: 414px;
+}
+
+.colour-hex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  background-color: #1f2937;
+}
+
+@media (max-width: 550px){
+
+  header {
+    flex-direction:column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #colour-picker {
+    width: 60%;
+  }
+  #scheme-select{
+    min-width: 250px;
+    max-width: 300px;
+  }
+
+  header p{
+    font-size: 1em;
+    margin: 0;
+  }
+
+  main {
+    flex-direction: column;
+    /* height: 20%; */
+  }
+  .colour-div {
+    width: 100%;
+    display: flex;
+  }
+  
+  .colour-bar {
+    width: 80%;
+    height: 92px;
+  }
+
+  .colour-hex{
+    width: 20%;
+    height: 92px;
+  }
+
+ 
+}
