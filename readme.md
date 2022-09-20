@@ -1,4 +1,4 @@
-# Colour Picker App
+# Colour Scheme Generator
 
 - the API: https://www.thecolorapi.com/docs#schemes-generate-scheme-get
 - the design: https://www.figma.com/file/twasy8Bca4hW7gunLFSLoY/Color-Scheme-Generator?node-id=2%3A1155
@@ -6,7 +6,6 @@
 
 ## Todo
 
-- border radius
 - click to copy hex values to clipboard
 
 ## Resources Found
@@ -15,8 +14,8 @@
 
 ## Requirements
 
-- choose "seed colour" with an <input type="color" />
-- choose a colour scheme mode in a <select> box
+- choose "seed colour" with an input type="color"
+- choose a colour scheme mode in a select box
 - clicking button makes request to the Color API to get a color scheme
 - display scheme colors and hex values on the page
 
