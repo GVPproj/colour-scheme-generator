@@ -18,7 +18,7 @@
     <div class="container">
       <header>
         <input id="colour-picker" value="#1111dd" type="color" />
-        <input type="text" name="user-hex-display" id="user-hex-display">
+        <input type="text" name="user-hex-display" id="user-hex-display" />
 
         <div class="custom-select">
           <select name="scheme-select" id="scheme-select">
@@ -32,31 +32,34 @@
           </select>
         </div>
         <!--custom select-->
-        <button id="btn-submit" type="submit">Get Colour Scheme</button>
+        <button id="btn-submit" type="submit">Get Scheme</button>
       </header>
       <main>
         <div class="colour-div">
           <div class="colour-bar" id="colour-bar-1"></div>
-          <div class="colour-hex"><p id="hex-1"></p></div>
+          <div class="colour-hex"><button id="hex-1"></button></div>
         </div>
         <div class="colour-div">
           <div class="colour-bar" id="colour-bar-2"></div>
-          <div class="colour-hex"><p id="hex-2"></p></div>
+          <div class="colour-hex"><button id="hex-2"></button></div>
         </div>
         <div class="colour-div">
           <div class="colour-bar" id="colour-bar-3"></div>
-          <div class="colour-hex"><p id="hex-3"></p></div>
+          <div class="colour-hex"><button id="hex-3"></button></div>
         </div>
         <div class="colour-div">
           <div class="colour-bar" id="colour-bar-4"></div>
-          <div class="colour-hex"><p id="hex-4"></p></div>
+          <div class="colour-hex"><button id="hex-4"></button></div>
         </div>
         <div class="colour-div">
           <div class="colour-bar" id="colour-bar-5"></div>
-          <div class="colour-hex"><p id="hex-5"></p></div>
+          <div class="colour-hex"><button id="hex-5"></button></div>
         </div>
       </main>
     </div>
+
+    <h4>Copy hex codes with a click.</h4>
+    <h4 id="copy-notification"></h4>
     <!--  container -->
   </body>
 </html>

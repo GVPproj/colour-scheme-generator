@@ -11,11 +11,13 @@ const hexCodes = [
   document.getElementById("hex-3"),
   document.getElementById("hex-4"),
   document.getElementById("hex-5"),
-] // all our hex code texts at bottom
+] // all our hex code buttons at bottom
 const colourPicker = document.getElementById("colour-picker")
 const schemeSelect = document.getElementById("scheme-select")
 const submitBtn = document.getElementById("btn-submit")
 const userHexDisplay = document.getElementById("user-hex-display")
+const copyNotification = document.getElementById("copy-notification")
+
 
 let userHex = colourPicker.value
 userHexDisplay.value = userHex
@@ -23,9 +25,9 @@ userHexDisplay.value = userHex
 initialize()
 
 colourPicker.addEventListener("change", watchColorPicker, false)
-userHexDisplay.addEventListener("change", ()=>{
-    userHex = userHexDisplay.value
-    colourPicker.value = userHex
+userHexDisplay.addEventListener("change", () => {
+  userHex = userHexDisplay.value
+  colourPicker.value = userHex
 })
 submitBtn.addEventListener("click", fetchScheme)
 
@@ -75,6 +77,13 @@ function fetchScheme() {
     })
 }
 
-for (hexCode of hexCodes){
-    console.log(hexCode.textContent)
+for (let i = 0; i < hexCodes.length; i++) {
+  hexCodes[i].addEventListener("click", () => {
+    const code = hexCodes[i].textContent.toUpperCase()
+    navigator.clipboard.writeText(code)
+    copyNotification.textContent = `Copied ${code} to clipboard!`
+    setTimeout(()=>{
+        copyNotification.textContent = ''
+    }, 1500)
+  })
 }
