@@ -18,13 +18,15 @@ const submitBtn = document.getElementById("btn-submit")
 const userHexDisplay = document.getElementById("user-hex-display")
 
 let userHex = colourPicker.value
-userHexDisplay.textContent = userHex
-
-console.log()
+userHexDisplay.value = userHex
 
 initialize()
 
 colourPicker.addEventListener("change", watchColorPicker, false)
+userHexDisplay.addEventListener("change", ()=>{
+    userHex = userHexDisplay.value
+    colourPicker.value = userHex
+})
 submitBtn.addEventListener("click", fetchScheme)
 
 function initialize() {
@@ -43,9 +45,7 @@ function initialize() {
 
 function watchColorPicker(event) {
   userHex = event.target.value
-  userHexDisplay.textContent = userHex
-  bars[0].style.background = userHex
-  hexCodes[0].textContent = userHex
+  userHexDisplay.value = userHex
 }
 
 function fetchScheme() {
@@ -73,4 +73,8 @@ function fetchScheme() {
       hexCodes[3].textContent = data.colors[3].hex.value
       hexCodes[4].textContent = data.colors[4].hex.value
     })
+}
+
+for (hexCode of hexCodes){
+    console.log(hexCode.textContent)
 }

@@ -6,6 +6,7 @@
 
 ## Todo
 
+- border radius
 - click to copy hex values to clipboard
 
 ## Resources Found
