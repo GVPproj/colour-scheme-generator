@@ -155,6 +155,10 @@ select{
 
 @media (max-width: 600px){
 
+  body{
+    background: #1f293a;
+  }
+
   .container{
     width: 100%;
     /* height: 80%; */
