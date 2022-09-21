@@ -6,7 +6,8 @@
 
 ## Todo
 
-- click to copy hex values to clipboard
+- refactor CSS
+- could use template strings to clean up HTML file
 
 ## Resources Found
 
